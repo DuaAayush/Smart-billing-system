@@ -1,0 +1,194 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styling with gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #002f4b, #00aaff);
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #003d5b;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a, #theme-toggle {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #005082;
+}
+
+.section {
+    display: none; /* Start with all sections hidden */
+}
+
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.summary-cards .card {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-cards .card:last-child {
+    margin-right: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+footer {
+    background-color: #003d5b;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(to bottom, #001a33, #005082);
+    color: #fff;
+}
+
+body.dark-mode main {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .summary-cards .card {
+    background-color: #33475b;
+}
+
+body.dark-mode table th, body.dark-mode table td {
+    border-color: #444;
+}
+
+body.dark-mode table th {
+    background-color: #555;
+}
+
+body.dark-mode footer {
+    background-color: #001a33;
+}
+
+body.dark-mode nav {
+    background-color: #001a33;
+}
+
+body.dark-mode nav ul li a, body.dark-mode #theme-toggle {
+    color: #ddd;
+}
+
+body.dark-mode nav ul li a:hover, body.dark-mode #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
